@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:hint="Book Title"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/authorEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Author"
+            android:inputType="text"
+            android:layout_below="@id/titleEditText"/>
+
+        <EditText
+            android:id="@+id/summaryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Summary"
+            android:inputType="text"
+            android:layout_below="@id/authorEditText"/>
+
+        <EditText
+            android:id="@+id/copiesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Copies"
+            android:inputType="number"
+            android:layout_below="@id/summaryEditText"/>
+
+        <EditText
+            android:id="@+id/priceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/copiesEditText"/>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="saveInformation"
+            android:layout_below="@id/priceEditText"
+            android:layout_marginHorizontal="5dp"
+            android:text="save"/>
+
+        <Button
+            android:id="@+id/loadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="loadInformation"
+            android:layout_marginHorizontal="5dp"
+            android:layout_below="@id/saveButton"
+
+        android:text="load"/>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="updateInfo"
+            android:layout_below="@id/loadButton"
+            android:layout_marginHorizontal="5dp"
+            android:text="Update Copies and Price"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteInformation"
+            android:text="Delete information"
+            android:layout_below="@id/updateButton"
+            android:layout_marginHorizontal="5dp"/>
+
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_below="@id/deleteButton"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</ScrollView>
